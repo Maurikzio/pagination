@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <style>
+        #users-list{
+            list-style: none;
+            padding: 0px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card{
+            /* background-color: aqua; */
+            margin-bottom: 10px;
+            text-align: center;
+            border: 1px solid grey;
+            padding: 5px;
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+        }
+        .avatar{
+            border-radius: 50%;
+            width: 80px;
+            margin: auto;
+        }
+        .description{
+            font-family: 'Arial';
+            /* background-color: orange; */
+        }
+        #pagination{
+            /* background-color: blue; */
+            display: flex;
+            justify-content: center;
+        }
+        #pages-container{
+            /* background-color: orange; */
+            color: rgb(48, 104, 248);
+            list-style: none;
+            display: flex;
+            padding-left: 0px;
+        }
+        button{
+            padding: 5px 10px;
+            border: 1px solid rgb(212, 217, 221);
+            /* color: rgb(48, 104, 248); */
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        button:focus{
+            color: white;
+            background-color: rgb(48, 104, 248);
+            box-shadow: rgb(150, 150, 150) 0px 0px 5px;
+            z-index: 99999;
+        }
+        .next-page{
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+        .prev-page{
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id='container'>
+        <ul id='users-list'></ul>
+    </div>
+    <div id='pagination'>
+        <!-- <ul id="pages-container">
+            <li class="prev-page">Previuos</li>
+            <li class="page">1</li>
+            <li class="page">2</li>
+            <li class="page">3</li>
+            <li class="next-page">Next</li>
+        </ul> -->
+        <button class="prev-page">Previuos</button>
+        <button class="page">1</button>
+        <button class="page">2</button>
+        <button class="page">3</button>
+        <button class="next-page">Next</button>
+    </div>
+    <script src="./fetch.js"></script>
+    <script src="./pagination.js"></script>
+</body>
+</html>
